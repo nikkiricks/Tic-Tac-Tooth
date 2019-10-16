@@ -25,8 +25,9 @@ h1 {
   cursor: pointer;
 }
 
-.counter {
+p {
   display: flex;
+  margin-bottom: 40px;
 }
 
 
@@ -60,13 +61,30 @@ h1 {
   border-right: none;
 }
 
- .player-one {
-  background-image: url(images/tooth.v2.svg);
-  width: 100px; 
-  height: 100px; 
+ .winning-icon {
+
+  background-image: url(images/Fairy.v2.svg);
+  width: 50px; 
+  height: 50px; 
   background-repeat: no-repeat; 
+ }
+
+  .tooth-icon {
+    background-image: url(images/tooth.v2.svg);
+    width: 100px; 
+    height: 100px; 
+    background-repeat: no-repeat; 
+  
+  }
+
+  .teeth-icon {
+    background-image: url(images/Teeth.v2.svg);
+    width: 100px; 
+    height: 100px; 
+    background-repeat: no-repeat; 
+  }
+
   /* background-position: left top; */
 
-}
 
 /* add hover over box feature */

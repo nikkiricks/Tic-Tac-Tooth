@@ -17,54 +17,64 @@ var box9 = document.querySelector('.box9')
 
 // 3. Rotate between players between Player 1 and Player 2
 
+// use for switching players
 var clickCounter = 0
+var playerOne = 'O'
+var playerTwo = 'X'
+var currentPlayer = playerOne
+
 var switchPlayer = function (event) {
-  var playerOne = (event.target.textContent = "O")
-  var playerTwo = (event.target.textContent = "X")
-  
-  if (boxes != playerOne || playerTwo ) {
-  clickCounter += 1 
-    if(clickCounter % 2 === 0) {
-      playerTwo
-    } else {
-      event.target.textContent = "O"
-    }
+  // check box is empty
+  if (event.target === true) {
+    return // stop the function
   }
 
-  // 4. 
+  // current player move
+  event.target.textContent = currentPlayer
+  clickCounter += 1 
 
+  
+  // switch player
+  if (clickCounter % 2 === 0) {
+    currentPlayer = playerOne
+  } else {
+    currentPlayer = playerTwo
+  }
+
+
+  // 4. Check which boxes have been ticked and 5. check for wins
   if ((box1.textContent === "O") && (box2.textContent === "O") && (box3.textContent === "O")) {
-    playerOneScore.textContent = "WINNER"
+    playerOneScore.classList.add('winning-icon')
   } else if ((box1.textContent === "X") && (box2.textContent === "X") && (box3.textContent === "X")) {
-    playerTwoScore.textContent = "WINNER"
+    playerTwoScore.classList.add('winning-icon')
   } else if ((box4.textContent === "O") && (box5.textContent === "O") && (box6.textContent === "O")) {
-    playerOneScore.textContent = "WINNER"
+    playerOneScore.classList.add('winning-icon')
   } else if ((box4.textContent === "X") && (box5.textContent === "X") && (box6.textContent === "X")) {
-    playerTwoScore.textContent = "WINNER"
+    playerTwoScore.classList.add('winning-icon')
   } else if ((box7.textContent === "O") && (box8.textContent === "O") && (box9.textContent === "O")) {
-    playerOneScore.textContent = "WINNER"
+    playerOneScore.classList.add('winning-icon')
   } else if ((box7.textContent === "X") && (box8.textContent === "X") && (box9.textContent === "X")) {
-    playerTwoScore.textContent = "WINNER"
+    playerTwoScore.classList.add('winning-icon')
   } else if ((box1.textContent === "O") && (box4.textContent === "O") && (box7.textContent === "O")) {
-    playerOneScore.textContent = "WINNER"
+    playerOneScore.classList.add('winning-icon')
   } else if ((box1.textContent === "X") && (box4.textContent === "X") && (box7.textContent === "X")) {
-    playerTwoScore.textContent = "WINNER"
+    playerTwoScore.classList.add('winning-icon')
   } else if ((box2.textContent === "O") && (box5.textContent === "O") && (box8.textContent === "O")) {
-    playerOneScore.textContent = "WINNER"
+    playerOneScore.classList.add('winning-icon')
   } else if ((box2.textContent === "X") && (box5.textContent === "X") && (box8.textContent === "X")) {
-    playerTwoScore.textContent = "WINNER"
+    playerTwoScore.classList.add('winning-icon')
   } else if ((box3.textContent === "O") && (box6.textContent === "O") && (box9.textContent === "O")) {
-    playerOneScore.textContent = "WINNER"
+    playerOneScore.classList.add('winning-icon')
   } else if ((box3.textContent === "X") && (box6.textContent === "X") && (box9.textContent === "X")) {
-    playerTwoScore.textContent = "WINNER"
+    playerTwoScore.classList.add('winning-icon')
   } else if ((box1.textContent === "O") && (box5.textContent === "O") && (box9.textContent === "O")) {
-    playerOneScore.textContent = "WINNER"
+    playerOneScore.classList.add('winning-icon')
   } else if ((box1.textContent === "X") && (box5.textContent === "X") && (box9.textContent === "X")) {
-    playerTwoScore.textContent = "WINNER"
+    playerTwoScore.classList.add('winning-icon')
   } else if ((box3.textContent === "O") && (box5.textContent === "O") && (box7.textContent === "O") ) {
-    playerOneScore.textContent = "WINNER"
+    playerOneScore.classList.add('winning-icon')
   } else if ((box3.textContent === "X") && (box5.textContent === "X") && (box7.textContent === "X")) {
-    playerTwoScore.textContent = "WINNER"
+    playerTwoScore.classList.add('winning-icon')
   } else {
 
   }
