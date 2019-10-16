@@ -93,26 +93,29 @@ var playGame = function (event) {
 for (var i = 0; i < boxes.length; i++) {
   boxes[i].addEventListener('click', playGame)
 
+  
+  //don't delete, end of overall function
+}
 
 
 // 7. Clear board with a reset function
 
-//   var resetGame = function () {
-//     console.log('working!')
-//     // if (playerOne or playerTwo contains winning icon) {
-//     //   then remove.('sloane-icon')
-//     // }
-//   }
+  var resetGame = function () {
 
-// //looping grid clicks once reset button
-//   for (var i = 0; i < boxes.length; i++) {
-//     resetBtn.addEventListener('click', resetGame)
-//   }
+    // console.log('working!')
+    for (var i = 0; i < boxes.length; i++) {
+      if (playerOneScore.classList.contains('winning-icon')) {
+        boxes[i].classList.remove('sloane-icon')
+        boxes[i].classList.remove('hockey-icon')
+      } else if (playerTwoScore.classList.contains('winning-icon')) {
+        boxes[i].classList.remove('sloane-icon')
+        boxes[i].classList.remove('hockey-icon')
+      }
+    }
+  }
 
-
-//don't delete, end of overall function
-}
-
+//looping grid clicks once reset button  
+  resetBtn.addEventListener('click', resetGame)
 
 
 
@@ -145,4 +148,6 @@ JS
 
 CSS
 -Make the pictures B&W
+-Make the Tooth text in header the tooth image instead
+-animate the page to have fairy flying in?
 */
