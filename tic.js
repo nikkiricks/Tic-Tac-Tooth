@@ -13,24 +13,29 @@ var box6 = document.querySelector('.box6')
 var box7 = document.querySelector('.box7')
 var box8 = document.querySelector('.box8')
 var box9 = document.querySelector('.box9')
+var resetBtn = document.querySelector('.reset-btn')
 
 
 // 3. Rotate between players between Player 1 and Player 2
 
 // use for switching players
 var clickCounter = 0
-var playerOne = 'O'
-var playerTwo = 'X'
+var playerOne = 'sloane-icon'
+var playerTwo = 'hockey-icon'
 var currentPlayer = playerOne
 
-var switchPlayer = function (event) {
-  // check box is empty
-  if (event.target === true) {
+var playGame = function (event) {
+  // check box is empty (this isn't working)
+  if (boxes === ' ') {
     return // stop the function
   }
 
   // current player move
-  event.target.textContent = currentPlayer
+  event.target.classList.add(currentPlayer)
+
+  // event.target.classList = add('sloane-icon')
+  // event.target.classList.add('sloane-icon')
+
   clickCounter += 1 
 
   
@@ -42,38 +47,41 @@ var switchPlayer = function (event) {
   }
 
 
-  // 4. Check which boxes have been ticked and 5. check for wins
-  if ((box1.textContent === "O") && (box2.textContent === "O") && (box3.textContent === "O")) {
+  // 4. Check which boxes have been ticked 
+  if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon'))) {
+  
+   //5. insert winning icon next to player name
     playerOneScore.classList.add('winning-icon')
-  } else if ((box1.textContent === "X") && (box2.textContent === "X") && (box3.textContent === "X")) {
+  /// Repeat steps for all possible 9 wins for each player
+  } else if ((box1.classList.contains('hockey-icon')) && (box2.classList.contains('hockey-icon')) && (box3.classList.contains('hockey-icon'))) {
     playerTwoScore.classList.add('winning-icon')
-  } else if ((box4.textContent === "O") && (box5.textContent === "O") && (box6.textContent === "O")) {
+  } else if ((box4.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon'))) {
     playerOneScore.classList.add('winning-icon')
-  } else if ((box4.textContent === "X") && (box5.textContent === "X") && (box6.textContent === "X")) {
+  } else if ((box4.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon'))) {
     playerTwoScore.classList.add('winning-icon')
-  } else if ((box7.textContent === "O") && (box8.textContent === "O") && (box9.textContent === "O")) {
+  } else if ((box7.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon'))) {
     playerOneScore.classList.add('winning-icon')
-  } else if ((box7.textContent === "X") && (box8.textContent === "X") && (box9.textContent === "X")) {
+  } else if ((box7.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon'))) {
     playerTwoScore.classList.add('winning-icon')
-  } else if ((box1.textContent === "O") && (box4.textContent === "O") && (box7.textContent === "O")) {
+  } else if ((box1.classList.contains('sloane-icon')) && (box4.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon'))) {
     playerOneScore.classList.add('winning-icon')
-  } else if ((box1.textContent === "X") && (box4.textContent === "X") && (box7.textContent === "X")) {
+  } else if ((box1.classList.contains('hockey-icon')) && (box4.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon'))) {
     playerTwoScore.classList.add('winning-icon')
-  } else if ((box2.textContent === "O") && (box5.textContent === "O") && (box8.textContent === "O")) {
+  } else if ((box2.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon'))) {
     playerOneScore.classList.add('winning-icon')
-  } else if ((box2.textContent === "X") && (box5.textContent === "X") && (box8.textContent === "X")) {
+  } else if ((box2.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon'))) {
     playerTwoScore.classList.add('winning-icon')
-  } else if ((box3.textContent === "O") && (box6.textContent === "O") && (box9.textContent === "O")) {
+  } else if ((box3.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon'))) {
     playerOneScore.classList.add('winning-icon')
-  } else if ((box3.textContent === "X") && (box6.textContent === "X") && (box9.textContent === "X")) {
+  } else if ((box3.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon'))) {
     playerTwoScore.classList.add('winning-icon')
-  } else if ((box1.textContent === "O") && (box5.textContent === "O") && (box9.textContent === "O")) {
+  } else if ((box1.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon'))) {
     playerOneScore.classList.add('winning-icon')
-  } else if ((box1.textContent === "X") && (box5.textContent === "X") && (box9.textContent === "X")) {
+  } else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon'))) {
     playerTwoScore.classList.add('winning-icon')
-  } else if ((box3.textContent === "O") && (box5.textContent === "O") && (box7.textContent === "O") ) {
+  } else if ((box3.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon')) ) {
     playerOneScore.classList.add('winning-icon')
-  } else if ((box3.textContent === "X") && (box5.textContent === "X") && (box7.textContent === "X")) {
+  } else if ((box3.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon'))) {
     playerTwoScore.classList.add('winning-icon')
   } else {
 
@@ -81,13 +89,34 @@ var switchPlayer = function (event) {
 
   }
 
-
+//looping through for the grid clicks
 for (var i = 0; i < boxes.length; i++) {
-  boxes[i].addEventListener('click', switchPlayer)
-}
-    
+  boxes[i].addEventListener('click', playGame)
 
-//saved c/p code
+
+
+// 7. Clear board with a reset function
+
+//   var resetGame = function () {
+//     console.log('working!')
+//     // if (playerOne or playerTwo contains winning icon) {
+//     //   then remove.('sloane-icon')
+//     // }
+//   }
+
+// //looping grid clicks once reset button
+//   for (var i = 0; i < boxes.length; i++) {
+//     resetBtn.addEventListener('click', resetGame)
+//   }
+
+
+//don't delete, end of overall function
+}
+
+
+
+
+
 
 
 
@@ -101,7 +130,7 @@ for (var i = 0; i < boxes.length; i++) {
 3. DONE Rotate between players
 4. DONE Track which boxes have been marked X and which ones have been marked O and total
 5. DONE Declare winner 
-6. Tally winner on the score board
+6. SEMI-DONE Tally winner on the score board
 //Code to try and update the player count
   // completedCount.textContent = event.target.textContent('X' || 'O').length
   // console.log(event.target.textContent('X' || 'O').length)
@@ -115,6 +144,5 @@ JS
 -Make a draw declaration
 
 CSS
--Replace X and O's with picture of a tooth and a toothless grin
-
+-Make the pictures B&W
 */
