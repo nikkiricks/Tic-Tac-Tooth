@@ -5,54 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tic-Tac-Tooth</title>
-  <link rel="shortcut icon" type = 'image/svg' href="images/trash/noun_fairy_1995823 (1).png">
+  <link rel="shortcut icon" type = 'image/svg' href="images/ttt-favicon.jpg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-      <h1>Tic-Tac-</h1>
+  <header class = "main-header">
+      <h1>Tic - Tac -</h1>
       <img class = "tooth-header" src="images/noun_Tooth_2025121.svg" alt="">
   </header>
   
+  <section class="player-container">
 
-  <div class = "player-boxes">
+    <div class = "player1-scorebox">
+      <header class="player1-header">
+          <p>Player 1: </p>
+          <span class="win-icon player-one-score"> </span>
+            <div class="coins p1-coins">
+                <span class="p1-coin1"></span>
+                <span class="p1-coin2"></span>
+                <span class="p1-coin3"></span>
+            </div>
+      </header>
+    </div>
 
-    <p>Player 1: <span class="win-icon player-one-score"> </span> </p>
-    <p>Player 2: <span class="win-icon player-two-score"></span> </p>
-
-  </div>
-
-  <div class="coin-boxes">
-      <div class="coins p1-coins">
-        <span class="p1-coin1"></span>
-        <span class="p1-coin2"></span>
-        <span class="p1-coin3"></span>
+    <div class = "player2-scorebox">    
+      <header class="player2-header">
+        <p>Player 2: </p>
+        <span class="win-icon player-two-score"></span>
+          <div class="coins p2-coins">
+            <span class="p2-coin1 "></span>
+            <span class="p2-coin2"></span>
+            <span class="p2-coin3 "></span>
+          </div>
+      </header>
+    
       </div>
 
-      <div class="coins p2-coins">
-        <span class="p2-coin1"></span>
-        <span class="p2-coin2"></span>
-        <span class="p2-coin3"></span>
-      </div>
-
-  </div>
+  </section>
+  
 
   <div class="button">
       <button class="reset-btn">RESET</button>
   </div>
 
-
-  <div class = "board-container">
-    <div class="box box1"></div>
-    <div class="box box2"></div>
-    <div class="box box3"></div>
-    <div class="box box4"></div>
-    <div class="box box5"></div>
-    <div class="box box6"></div>
-    <div class="box box7"></div>
-    <div class="box box8"></div>
-    <div class="box box9"></div>
+  <div class="container">
+      <div class = "board-container">
+          <div class="box box1"></div>
+          <div class="box box2"></div>
+          <div class="box box3"></div>
+          <div class="box box4"></div>
+          <div class="box box5"></div>
+          <div class="box box6"></div>
+          <div class="box box7"></div>
+          <div class="box box8"></div>
+          <div class="box box9"></div>
+        </div>
   </div>
+
   
 
 

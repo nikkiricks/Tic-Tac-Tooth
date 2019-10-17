@@ -317,11 +317,12 @@ JS
 -Make it so after winner is declared the game is over
 
 CSS
--Make the pictures B&W
--Make the Tooth text in header the tooth image instead
--animate the page to have fairy flying in?
+-DONEMake the pictures B&W
+-DONE Make the Tooth text in header the tooth image instead
+-TRYING animate the page to have fairy flying in?
 -make the images random
 -Make a draw through the boxes animation
+-Create a cover page where you click the tooth to enter (could just have a box, make the tooth a button, and phase the box out when clicked)
 
 */
 
