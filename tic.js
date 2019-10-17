@@ -29,6 +29,9 @@ var playerOne = 'sloane-icon'
 var playerTwo = 'hockey-icon'
 var currentPlayer = playerOne
 
+
+
+
 var playGame = function (event) {
   // check box is empty (this isn't working)
   if (boxes[i] === currentPlayer ) {
@@ -43,6 +46,194 @@ var playGame = function (event) {
 
   clickCounter++
 
+
+  // 7. Tally coins games winner on the score board
+
+  //for all of box 1-2-3 for playerOne - insert all coins
+  if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin')) && (p1Coin2.classList.contains('coin'))) {
+    p1Coin3.classList.add('coin')
+    //for all of box 1-2-3 for playerOne - insert two coins
+  } else if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin'))) {
+    p1Coin2.classList.add('coin')
+      //for all of box 1-2-3 for playerOne - insert one coin
+  } else if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon'))) {
+      p1Coin1.classList.add('coin')
+    // 4. Check which boxes have been ticked 
+  } else if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon'))) {
+    
+    //5. insert winning icon (fairy) next to player name to begin with
+      playerOneScore.classList.add('winning-icon')
+
+    } 
+  /// Repeat steps for all possible 9 wins for each player
+  /// box 1-2-3 playerTwo
+  if ((box1.classList.contains('hockey-icon')) && (box2.classList.contains('hockey-icon')) && (box3.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+    p2Coin3.classList.add('coin')
+  } else if ((box1.classList.contains('hockey-icon')) && (box2.classList.contains('hockey-icon')) && (box3.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
+    p2Coin2.classList.add('coin')
+  } else if ((box1.classList.contains('hockey-icon')) && (box2.classList.contains('hockey-icon')) && (box3.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon'))) {
+      p2Coin1.classList.add('coin')
+  }
+  else if ((box1.classList.contains('hockey-icon')) && (box2.classList.contains('hockey-icon')) && (box3.classList.contains('hockey-icon'))) {
+    playerTwoScore.classList.add('winning-icon')
+  } 
+
+    //box 4-5-6 - playerOne
+
+  else if ((box4.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin')) && (p1Coin2.classList.contains('coin'))) {
+    p1Coin3.classList.add('coin')
+  } else if ((box4.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin'))) {
+    p1Coin2.classList.add('coin')
+  } else if ((box4.classList.contains('sloane-icon')) && (box4.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon'))) {
+      p1Coin1.classList.add('coin')
+  } else if ((box4.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon'))) {
+      playerOneScore.classList.add('winning-icon')
+  } 
+
+    
+  //box 4-5-6 playerTwo
+  if ((box4.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+    p2Coin3.classList.add('coin')
+  } else if ((box4.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
+    p2Coin2.classList.add('coin')
+  } else if ((box4.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon'))) {
+      p2Coin1.classList.add('coin')
+  } else if ((box4.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon'))) {
+    playerTwoScore.classList.add('winning-icon')
+  } 
+
+  //box 7-8-9 - playerOne
+  else if ((box7.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin')) && (p1Coin2.classList.contains('coin'))) {
+    p1Coin3.classList.add('coin')
+  } else if ((box7.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin'))) {
+    p1Coin2.classList.add('coin')
+  } else if ((box7.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon'))) {
+      p1Coin1.classList.add('coin')
+  } else if ((box7.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon'))) {
+      playerOneScore.classList.add('winning-icon')
+  } 
+  
+  //box 7-8-9 - playerTwo
+  if ((box7.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+    p2Coin3.classList.add('coin')
+  } else if ((box7.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
+    p2Coin2.classList.add('coin')
+  } else if ((box7.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon'))) {
+      p2Coin1.classList.add('coin')
+  } else if ((box7.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon'))) {
+    playerTwoScore.classList.add('winning-icon')
+  } 
+
+  //box 1-4-7 - playerOne
+  else if ((box1.classList.contains('sloane-icon')) && (box4.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin')) && (p1Coin2.classList.contains('coin'))) {
+    p1Coin3.classList.add('coin')
+  } else if ((box1.classList.contains('sloane-icon')) && (box4.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin'))) {
+    p1Coin2.classList.add('coin')
+  } else if ((box1.classList.contains('sloane-icon')) && (box4.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon'))) {
+      p1Coin1.classList.add('coin')
+  } else if ((box1.classList.contains('sloane-icon')) && (box4.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon'))) {
+      playerOneScore.classList.add('winning-icon')
+  } 
+  
+  //box 1-4-7 - playerTwo
+  if ((box1.classList.contains('hockey-icon')) && (box4.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+    p2Coin3.classList.add('coin')
+  } else if ((box1.classList.contains('hockey-icon')) && (box4.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
+    p2Coin2.classList.add('coin')
+  } else if ((box1.classList.contains('hockey-icon')) && (box4.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon'))) {
+      p2Coin1.classList.add('coin')
+  } else if ((box1.classList.contains('hockey-icon')) && (box4.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon'))) {
+    playerTwoScore.classList.add('winning-icon')
+  } 
+
+  //box 2-5-8- playerOne
+  else if ((box2.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin')) && (p1Coin2.classList.contains('coin'))) {
+    p1Coin3.classList.add('coin')
+  } else if ((box2.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin'))) {
+    p1Coin2.classList.add('coin')
+  } else if ((box2.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon'))) {
+      p1Coin1.classList.add('coin')
+  } else if ((box2.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon'))) {
+      playerOneScore.classList.add('winning-icon')
+  } 
+  
+ //box 2-5-8- playerTwo
+ if ((box2.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+  p2Coin3.classList.add('coin')
+} else if ((box2.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
+  p2Coin2.classList.add('coin')
+} else if ((box2.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon'))) {
+    p2Coin1.classList.add('coin')
+} else if ((box2.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon'))) {
+  playerTwoScore.classList.add('winning-icon')
+} 
+
+  //box 3-6-9 playerOne
+  else if ((box3.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin')) && (p1Coin2.classList.contains('coin'))) {
+    p1Coin3.classList.add('coin')
+  } else if ((box3.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin'))) {
+    p1Coin2.classList.add('coin')
+  } else if ((box3.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon'))) {
+      p1Coin1.classList.add('coin')
+  } else if ((box3.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon'))) {
+      playerOneScore.classList.add('winning-icon')
+  } 
+    //box 3-6-9 playerTwo
+  if ((box3.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+    p2Coin3.classList.add('coin')
+  } else if ((box3.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
+    p2Coin2.classList.add('coin')
+  } else if ((box3.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon'))) {
+      p2Coin1.classList.add('coin')
+  } else if ((box3.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon'))) {
+    playerTwoScore.classList.add('winning-icon')
+  } 
+
+  //box 1-5-9 - playerOne
+  else if ((box1.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin')) && (p1Coin2.classList.contains('coin'))) {
+    p1Coin3.classList.add('coin')
+  } else if ((box1.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin'))) {
+    p1Coin2.classList.add('coin')
+  } else if ((box1.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon'))) {
+      p1Coin1.classList.add('coin')
+  } else if ((box1.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon'))) {
+      playerOneScore.classList.add('winning-icon')
+  } 
+    //box 1-5-9 - playerTwo
+    if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+      p2Coin3.classList.add('coin')
+    } else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
+      p2Coin2.classList.add('coin')
+    } else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon'))) {
+        p2Coin1.classList.add('coin')
+    } else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon'))) {
+      playerTwoScore.classList.add('winning-icon')
+    } 
+
+  //box 3-5-7 playerOne
+  else if ((box3.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin')) && (p1Coin2.classList.contains('coin'))) {
+    p1Coin3.classList.add('coin')
+  } else if ((box3.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin'))) {
+    p1Coin2.classList.add('coin')
+  } else if ((box3.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon'))) {
+      p1Coin1.classList.add('coin')
+  } else if ((box3.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon'))) {
+      playerOneScore.classList.add('winning-icon')
+  } 
+ 
+  //box 3-5-7 playerTwo
+  if ((box3.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+    p2Coin3.classList.add('coin')
+  } else if ((box3.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
+    p2Coin2.classList.add('coin')
+  } else if ((box3.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon'))) {
+      p2Coin1.classList.add('coin')
+  } else if ((box3.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon'))) {
+    playerTwoScore.classList.add('winning-icon')
+  }  else {
+
+  }
+
   
   // switch player
   if (clickCounter % 2 === 0) {
@@ -52,56 +243,15 @@ var playGame = function (event) {
   }
   //////
 
- // 7. Tally coins games winner on the score board
-//for all of box 1-2-3 for playerOne - insert all coins
-if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin')) && (p1Coin2.classList.contains('coin'))) {
-  p1Coin3.classList.add('coin')
-} else if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin'))) {
-  p1Coin2.classList.add('coin')
-} else if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon'))) {
-    p1Coin1.classList.add('coin')
-  // 4. Check which boxes have been ticked 
-} else if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon'))) {
+  // use for switching scores
+  // trying to figure out currentPlayer and currentScore streamlining
+  // var currentScore = playerOneScore
   
-   //5. insert winning icon (fairy) next to player name to begin with
-    playerOneScore.classList.add('winning-icon')
-  /// Repeat steps for all possible 9 wins for each player
-
-
-  
-  } else if ((box1.classList.contains('hockey-icon')) && (box2.classList.contains('hockey-icon')) && (box3.classList.contains('hockey-icon'))) {
-    playerTwoScore.classList.add('winning-icon')
-  } else if ((box4.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon'))) {
-    playerOneScore.classList.add('winning-icon')
-  } else if ((box4.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon'))) {
-    playerTwoScore.classList.add('winning-icon')
-  } else if ((box7.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon'))) {
-    playerOneScore.classList.add('winning-icon')
-  } else if ((box7.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon'))) {
-    playerTwoScore.classList.add('winning-icon')
-  } else if ((box1.classList.contains('sloane-icon')) && (box4.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon'))) {
-    playerOneScore.classList.add('winning-icon')
-  } else if ((box1.classList.contains('hockey-icon')) && (box4.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon'))) {
-    playerTwoScore.classList.add('winning-icon')
-  } else if ((box2.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box8.classList.contains('sloane-icon'))) {
-    playerOneScore.classList.add('winning-icon')
-  } else if ((box2.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon'))) {
-    playerTwoScore.classList.add('winning-icon')
-  } else if ((box3.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon'))) {
-    playerOneScore.classList.add('winning-icon')
-  } else if ((box3.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon'))) {
-    playerTwoScore.classList.add('winning-icon')
-  } else if ((box1.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon'))) {
-    playerOneScore.classList.add('winning-icon')
-  } else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon'))) {
-    playerTwoScore.classList.add('winning-icon')
-  } else if ((box3.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon')) ) {
-    playerOneScore.classList.add('winning-icon')
-  } else if ((box3.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon'))) {
-    playerTwoScore.classList.add('winning-icon')
-  } else {
-
-  }
+  //   if (clickCounter % 2 === 0) {
+  //     currentScore = playerScoreOne
+  //   } else {
+  //     currentScore = playerTwoScore
+  //   }
 
   }
 
