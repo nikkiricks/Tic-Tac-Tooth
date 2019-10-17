@@ -8,11 +8,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Tic-Tac-Tooth</h1>
+  <header>
+      <h1>Tic-Tac-</h1>
+      <img class = "tooth-header" src="images/noun_Tooth_2025121.svg" alt="">
+  </header>
+  
 
-  <p>Player 1: <span class="player-one-score"> </span> </p>
-  <p>Player 2: <span class="player-two-score"></span> </p>
+  <div class = "player-boxes">
 
+    <p>Player 1: <span class="win-icon player-one-score"> </span> </p>
+    <p>Player 2: <span class="win-icon player-two-score"></span> </p>
+
+  </div>
+
+  <button class="reset-btn">RESET</button>
 
   <div class = "board-container">
     <div class="box box1"></div>
@@ -26,7 +35,7 @@
     <div class="box box9"></div>
   </div>
   
-  <button class="reset-btn">RESET</button>
+
 
   
   <script src="tic.js"></script>

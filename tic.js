@@ -26,17 +26,17 @@ var currentPlayer = playerOne
 
 var playGame = function (event) {
   // check box is empty (this isn't working)
-  if (boxes === ' ') {
+  if (boxes[i] === currentPlayer ) {
     return // stop the function
   }
 
   // current player move
   event.target.classList.add(currentPlayer)
 
-  // event.target.classList = add('sloane-icon')
+  // event.target.classList.add('sloane-icon')
   // event.target.classList.add('sloane-icon')
 
-  clickCounter += 1 
+  clickCounter++
 
   
   // switch player
@@ -98,19 +98,28 @@ for (var i = 0; i < boxes.length; i++) {
 }
 
 
-// 7. Clear board with a reset function
+// 6. Clear board with a reset function
 
   var resetGame = function () {
 
-    // console.log('working!')
     for (var i = 0; i < boxes.length; i++) {
       if (playerOneScore.classList.contains('winning-icon')) {
         boxes[i].classList.remove('sloane-icon')
         boxes[i].classList.remove('hockey-icon')
-      } else if (playerTwoScore.classList.contains('winning-icon')) {
+  // 7. Tally more games winner on the score board
+      } else if (playerOneScore.classList.contains('winning-icon')) {
+          boxes[i].classList.remove('sloane-icon')
+          boxes[i].classList.remove('hockey-icon')
+  // Make a class to insert more icons??? Do I need to make more boxes?
+          playerOneScore.classList.add('winning-icon')
+      }
+      
+      
+      
+      else if (playerTwoScore.classList.contains('winning-icon')) {
         boxes[i].classList.remove('sloane-icon')
         boxes[i].classList.remove('hockey-icon')
-      }
+      } 
     }
   }
 
@@ -123,9 +132,6 @@ for (var i = 0; i < boxes.length; i++) {
 
 
 
- // create an array to loop through to be able to refer to placement on the grid?? 
-
-// var boxGrid = ['.box1', '.box2', '.box3', '.box4', '.box5', '.box6', '.box7', '.box8', '.box9' ]
 
 /*
 1. DONE Make 9 box grid
@@ -133,21 +139,26 @@ for (var i = 0; i < boxes.length; i++) {
 3. DONE Rotate between players
 4. DONE Track which boxes have been marked X and which ones have been marked O and total
 5. DONE Declare winner 
-6. SEMI-DONE Tally winner on the score board
-//Code to try and update the player count
-  // completedCount.textContent = event.target.textContent('X' || 'O').length
-  // console.log(event.target.textContent('X' || 'O').length)
-7. Clear game board (with a reset button?)
+6. DONE Clear game board (with a reset button?)
+7. Tally more games winner on the score board
+
 
 BONUS (once everything is functional)
 
 JS
 -Make it so it's not allowed to click on the same grid box twice
 -Make it so after winner is declared the game is over
--Make a draw declaration
 
 CSS
 -Make the pictures B&W
 -Make the Tooth text in header the tooth image instead
 -animate the page to have fairy flying in?
+-make the images random
+-Make a draw through the boxes animation
+
 */
+
+ // create an array to loop through to be able to refer to placement on the grid?? 
+
+// var boxGrid = ['.box1', '.box2', '.box3', '.box4', '.box5', '.box6', '.box7', '.box8', '.box9' ]
+
