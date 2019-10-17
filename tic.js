@@ -14,7 +14,12 @@ var box7 = document.querySelector('.box7')
 var box8 = document.querySelector('.box8')
 var box9 = document.querySelector('.box9')
 var resetBtn = document.querySelector('.reset-btn')
-
+var p1Coin1 = document.querySelector('.p1-coin1')
+var p1Coin2 = document.querySelector('.p1-coin2')
+var p1Coin3 = document.querySelector('.p1-coin3')
+var p2Coin1 = document.querySelector('.p2-coin1')
+var p2Coin2 = document.querySelector('.p2-coin2')
+var p2Coin3 = document.querySelector('.p2-coin3')
 
 // 3. Rotate between players between Player 1 and Player 2
 
@@ -45,14 +50,25 @@ var playGame = function (event) {
   } else {
     currentPlayer = playerTwo
   }
+  //////
 
-
+ // 7. Tally coins games winner on the score board
+//for all of box 1-2-3 for playerOne - insert all coins
+if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin')) && (p1Coin2.classList.contains('coin'))) {
+  p1Coin3.classList.add('coin')
+} else if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin'))) {
+  p1Coin2.classList.add('coin')
+} else if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon'))) {
+    p1Coin1.classList.add('coin')
   // 4. Check which boxes have been ticked 
-  if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon'))) {
+} else if ((box1.classList.contains('sloane-icon')) && (box2.classList.contains('sloane-icon')) && (box3.classList.contains('sloane-icon'))) {
   
-   //5. insert winning icon next to player name
+   //5. insert winning icon (fairy) next to player name to begin with
     playerOneScore.classList.add('winning-icon')
   /// Repeat steps for all possible 9 wins for each player
+
+
+  
   } else if ((box1.classList.contains('hockey-icon')) && (box2.classList.contains('hockey-icon')) && (box3.classList.contains('hockey-icon'))) {
     playerTwoScore.classList.add('winning-icon')
   } else if ((box4.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box6.classList.contains('sloane-icon'))) {
@@ -98,38 +114,39 @@ for (var i = 0; i < boxes.length; i++) {
 }
 
 
+
 // 6. Clear board with a reset function
 
-  var resetGame = function () {
 
-    for (var i = 0; i < boxes.length; i++) {
-      if (playerOneScore.classList.contains('winning-icon')) {
-        boxes[i].classList.remove('sloane-icon')
-        boxes[i].classList.remove('hockey-icon')
-  // 7. Tally more games winner on the score board
-      } else if (playerOneScore.classList.contains('winning-icon')) {
-          boxes[i].classList.remove('sloane-icon')
-          boxes[i].classList.remove('hockey-icon')
-  // Make a class to insert more icons??? Do I need to make more boxes?
-          playerOneScore.classList.add('winning-icon')
-      }
+var resetGame = function () {
+  
+  for (var i = 0; i < boxes.length; i++) {
+    if (playerOneScore.classList.contains('winning-icon')) {
+      boxes[i].classList.remove('sloane-icon')
+      boxes[i].classList.remove('hockey-icon')
       
       
-      
-      else if (playerTwoScore.classList.contains('winning-icon')) {
-        boxes[i].classList.remove('sloane-icon')
-        boxes[i].classList.remove('hockey-icon')
-      } 
-    }
+    } else if (playerTwoScore.classList.contains('winning-icon')) {
+      boxes[i].classList.remove('sloane-icon')
+      boxes[i].classList.remove('hockey-icon')
+    } 
   }
+}
 
 //looping grid clicks once reset button  
-  resetBtn.addEventListener('click', resetGame)
+resetBtn.addEventListener('click', resetGame)
 
 
 
 
-
+  // 7. Tally coins games winner on the score board
+//     else if ((playerOneScore.classList.contains('winning-icon')) && !(boxes[i].classList.contains('sloane-icon')) && !(boxes[i].classList.contains('hockey-icon'))) {  
+//       p1Coin1.classList.add('coin')
+// // Make a class to insert more icons??? Do I need to make more boxes?
+//       playerOneScore.classList.add('winning-icon')
+//   }
+  
+  
 
 
 
@@ -140,7 +157,7 @@ for (var i = 0; i < boxes.length; i++) {
 4. DONE Track which boxes have been marked X and which ones have been marked O and total
 5. DONE Declare winner 
 6. DONE Clear game board (with a reset button?)
-7. Tally more games winner on the score board
+7. Create more coin slots to win
 
 
 BONUS (once everything is functional)
