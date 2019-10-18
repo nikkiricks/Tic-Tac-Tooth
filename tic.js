@@ -302,6 +302,7 @@ BONUS (once everything is functional)
 JS
 -Make it so it's not allowed to click on the same grid box twice
 -Make it so after winner is declared the game is over
+-Have a draw option
 
 CSS
 -DONEMake the pictures B&W
