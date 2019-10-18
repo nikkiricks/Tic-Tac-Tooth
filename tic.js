@@ -322,7 +322,7 @@ CSS
 -TRYING animate the page to have fairy flying in?
 -make the images random
 -Make a draw through the boxes animation
--Create a cover page where you click the tooth to enter (could just have a box, make the tooth a button, and phase the box out when clicked)
+-Create a cover page where you click the tooth to enter (could just have a box, make the)
 
 */
 

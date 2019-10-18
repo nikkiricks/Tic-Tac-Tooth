@@ -1,10 +1,30 @@
 * {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   box-sizing: border-box;
-  background-color: blue;
-  color: white;
-
+  /* background-color: blue; */
 }
+
+body {
+  color: white;
+  animation: color-change-2x 60s linear infinite alternate both;
+}
+
+@keyframes color-change-2x {
+  0% {
+    background: #19dcea;
+  }
+  100% {
+    background: blue;
+  }
+}
+
+
+/* .enter {
+  height: 900%;
+  width: 900%;
+
+
+} */
 
 .main-header {
   display: flex;
@@ -14,7 +34,29 @@
 
   border: 3px dotted white;
   text-align: center;
+
+  margin: 0 250px;
+
+  animation: swing-in-top-fwd 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
+
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
 
 h1 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -31,7 +73,7 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   height: 100%;
-  margin: 10px;
+  margin: 10px 250px;
 
 }
 
@@ -149,9 +191,10 @@ h1 {
 }
 
 .button {
-  margin-top: 10px;
+
   display: flex;
   justify-content: flex-end;
+  margin: 10px 270px;
 }
 
 .reset-btn {
@@ -159,9 +202,9 @@ h1 {
   height: 30px;
   width: 60px;
   border-width: 3px;
+  background-color: inherit;
   border-color: white;
-  margin-right: 10%;
-
+  color: white;
 }
 
 .container {
@@ -173,7 +216,7 @@ h1 {
   height: 300px;
   width: 300px;
 
-  margin: 10%;
+  margin: 50px;
   text-align: center;
 
   display: flex;
