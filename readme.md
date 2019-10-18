@@ -2,7 +2,7 @@
 
 Which player will the tooth fairy visit? What will come next? Play now in this game of [Tic-Tac-Tooth](https://nikkiricks.github.io/my-project-one/).
 
-![](images/tic-tac-tooth-screenshot.png)
+![](images/trash/Tic-Tac-Tooth-Screenshot.png)
 
 ## Features
 
