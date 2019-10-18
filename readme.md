@@ -1,8 +1,8 @@
 # Tic-Tac-Tooth
 
-Which player will the tooth fairy visit? Who will get the most money? Play now in this game of [Tic-Tac-Tooth](https://nikkiricks.github.io/my-project-one/).
+Which player will the tooth fairy visit? What will come next? Play now in this game of [Tic-Tac-Tooth](https://nikkiricks.github.io/my-project-one/).
 
-![](images/Tic-Tac-Tooth-Screenshot.png)
+[![](images/tic-tac-tooth-screenshot.png)](https://nikkiricks.github.io/my-project-one/)
 
 ## Features
 
