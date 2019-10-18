@@ -41,8 +41,7 @@ var playGame = function (event) {
   // current player move
   event.target.classList.add(currentPlayer)
 
-  // event.target.classList.add('sloane-icon')
-  // event.target.classList.add('sloane-icon')
+
 
   clickCounter++
 
@@ -288,18 +287,6 @@ resetBtn.addEventListener('click', resetGame)
 
 
 
-
-  // 7. Tally coins games winner on the score board
-//     else if ((playerOneScore.classList.contains('winning-icon')) && !(boxes[i].classList.contains('sloane-icon')) && !(boxes[i].classList.contains('hockey-icon'))) {  
-//       p1Coin1.classList.add('coin')
-// // Make a class to insert more icons??? Do I need to make more boxes?
-//       playerOneScore.classList.add('winning-icon')
-//   }
-  
-  
-
-
-
 /*
 1. DONE Make 9 box grid
 2. DONE Allow every box to be clickable
@@ -307,7 +294,7 @@ resetBtn.addEventListener('click', resetGame)
 4. DONE Track which boxes have been marked X and which ones have been marked O and total
 5. DONE Declare winner 
 6. DONE Clear game board (with a reset button?)
-7. Create more coin slots to win
+7. DONE Create more coin slots to win
 
 
 BONUS (once everything is functional)
@@ -319,14 +306,12 @@ JS
 CSS
 -DONEMake the pictures B&W
 -DONE Make the Tooth text in header the tooth image instead
--TRYING animate the page to have fairy flying in?
+-DONE animate the page to have fairy flying in?
 -make the images random
 -Make a draw through the boxes animation
 -Create a cover page where you click the tooth to enter (could just have a box, make the)
 
 */
 
- // create an array to loop through to be able to refer to placement on the grid?? 
 
-// var boxGrid = ['.box1', '.box2', '.box3', '.box4', '.box5', '.box6', '.box7', '.box8', '.box9' ]
 

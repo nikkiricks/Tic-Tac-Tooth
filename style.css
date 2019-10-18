@@ -49,7 +49,7 @@ h1 {
 
 .player1-scorebox,
 .player2-scorebox {
-  /* border: 1px solid white; */
+
   display: flex;
   justify-content: flex-start;
   height: 100%;
@@ -63,12 +63,6 @@ h1 {
   align-items: flex-start;
   flex-wrap: wrap;
 }
-/* this has been deleted
- .coin-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-} */
 
 .coins {
   display: flex;
