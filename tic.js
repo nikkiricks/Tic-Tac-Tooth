@@ -21,7 +21,7 @@ var p2Coin1 = document.querySelector('.p2-coin1')
 var p2Coin2 = document.querySelector('.p2-coin2')
 var p2Coin3 = document.querySelector('.p2-coin3')
 
-// 3. Rotate between players between Player 1 and Player 2
+// Rotate between players between Player 1 and Player 2
 
 // use for switching players
 var clickCounter = 0
@@ -41,9 +41,16 @@ var playGame = function (event) {
   // current player move
   event.target.classList.add(currentPlayer)
 
-
-
   clickCounter++
+
+
+  //working on draw 
+  
+  // if (boxes.length === (currentPlayer) ) {
+  //   console.log('working draw')
+  //   alert ('draw')
+
+  // }
 
 
   // 7. Tally coins games winner on the score board
@@ -66,7 +73,7 @@ var playGame = function (event) {
     } 
   /// Repeat steps for all possible 9 wins for each player
   /// box 1-2-3 playerTwo
-  if ((box1.classList.contains('hockey-icon')) && (box2.classList.contains('hockey-icon')) && (box3.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+  else if ((box1.classList.contains('hockey-icon')) && (box2.classList.contains('hockey-icon')) && (box3.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
     p2Coin3.classList.add('coin')
   } else if ((box1.classList.contains('hockey-icon')) && (box2.classList.contains('hockey-icon')) && (box3.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
     p2Coin2.classList.add('coin')
@@ -91,7 +98,7 @@ var playGame = function (event) {
 
     
   //box 4-5-6 playerTwo
-  if ((box4.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+  else if ((box4.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
     p2Coin3.classList.add('coin')
   } else if ((box4.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
     p2Coin2.classList.add('coin')
@@ -113,7 +120,7 @@ var playGame = function (event) {
   } 
   
   //box 7-8-9 - playerTwo
-  if ((box7.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+ else if ((box7.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
     p2Coin3.classList.add('coin')
   } else if ((box7.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
     p2Coin2.classList.add('coin')
@@ -135,7 +142,7 @@ var playGame = function (event) {
   } 
   
   //box 1-4-7 - playerTwo
-  if ((box1.classList.contains('hockey-icon')) && (box4.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+  else if ((box1.classList.contains('hockey-icon')) && (box4.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
     p2Coin3.classList.add('coin')
   } else if ((box1.classList.contains('hockey-icon')) && (box4.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
     p2Coin2.classList.add('coin')
@@ -157,7 +164,7 @@ var playGame = function (event) {
   } 
   
  //box 2-5-8- playerTwo
- if ((box2.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+ else if ((box2.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
   p2Coin3.classList.add('coin')
 } else if ((box2.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box8.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
   p2Coin2.classList.add('coin')
@@ -178,7 +185,7 @@ var playGame = function (event) {
       playerOneScore.classList.add('winning-icon')
   } 
     //box 3-6-9 playerTwo
-  if ((box3.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+  else if ((box3.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
     p2Coin3.classList.add('coin')
   } else if ((box3.classList.contains('hockey-icon')) && (box6.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
     p2Coin2.classList.add('coin')
@@ -198,16 +205,16 @@ var playGame = function (event) {
   } else if ((box1.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box9.classList.contains('sloane-icon'))) {
       playerOneScore.classList.add('winning-icon')
   } 
-    //box 1-5-9 - playerTwo
-    if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
-      p2Coin3.classList.add('coin')
-    } else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
-      p2Coin2.classList.add('coin')
-    } else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon'))) {
-        p2Coin1.classList.add('coin')
-    } else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon'))) {
-      playerTwoScore.classList.add('winning-icon')
-    } 
+  //box 1-5-9 - playerTwo
+  else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+    p2Coin3.classList.add('coin')
+  } else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
+    p2Coin2.classList.add('coin')
+  } else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon'))) {
+      p2Coin1.classList.add('coin')
+  } else if ((box1.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box9.classList.contains('hockey-icon'))) {
+    playerTwoScore.classList.add('winning-icon')
+  } 
 
   //box 3-5-7 playerOne
   else if ((box3.classList.contains('sloane-icon')) && (box5.classList.contains('sloane-icon')) && (box7.classList.contains('sloane-icon')) && (playerOneScore.classList.contains('winning-icon')) && (p1Coin1.classList.contains('coin')) && (p1Coin2.classList.contains('coin'))) {
@@ -221,7 +228,7 @@ var playGame = function (event) {
   } 
  
   //box 3-5-7 playerTwo
-  if ((box3.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
+  else if ((box3.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin')) && (p2Coin2.classList.contains('coin'))) {
     p2Coin3.classList.add('coin')
   } else if ((box3.classList.contains('hockey-icon')) && (box5.classList.contains('hockey-icon')) && (box7.classList.contains('hockey-icon')) && (playerTwoScore.classList.contains('winning-icon')) && (p2Coin1.classList.contains('coin'))) {
     p2Coin2.classList.add('coin')
@@ -263,6 +270,16 @@ for (var i = 0; i < boxes.length; i++) {
 }
 
 
+// call draw
+
+// var callDraw = function () {
+//   if (boxes.length.contains(currentPlayer) )
+//   alert ('draw')
+
+// }
+
+// for (var i = 0; i < boxes.length; i++) {
+//   boxes[i].addEventListener('click', playGame)
 
 // 6. Clear board with a reset function
 
