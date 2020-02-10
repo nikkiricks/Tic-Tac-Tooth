@@ -1,6 +1,6 @@
 # Tic-Tac-Tooth
 
-Which player will the tooth fairy visit? What will come next? Play now in this game of [Tic-Tac-Tooth](https://nikkiricks.github.io/Tic-Tac-Tooth/){:target="\_blank"}.
+Which player will the tooth fairy visit? What will come next? Play now in this game of [Tic-Tac-Tooth](https://nikkiricks.github.io/Tic-Tac-Tooth/).
 
 ![](images/trash/Tic-Tac-Tooth-Screenshot.png)
 
